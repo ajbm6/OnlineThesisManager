@@ -11,6 +11,12 @@ define("USERNAME", "root");
 define("PASS", "");
 define("DBNAME", "project");
 
+if (function_exists('base_path')) {
+    function base_path($path = '')
+    {
+        return dirname(dirname(__FILE__));
+    }
+}
 
 function getUserNamePattern() {
     return "/^[a-zA-Z0-9_\.]+$/";
